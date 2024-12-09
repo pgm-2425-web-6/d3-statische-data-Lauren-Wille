@@ -13,7 +13,13 @@ d3.json("https://bobsburgers-api.herokuapp.com/episodes")
 
     episodesBySeason.sort((a, b) => a.season - b.season);
 
-    barChart("#barChart", episodesBySeason);
+    console.log(episodesBySeason);
+
+    barChart("#barChart", episodesBySeason, {
+      width: 800,
+      height: 400,
+      margin: { top: 20, right: 20, bottom: 50, left: 50 },
+    });
   })
   .catch((error) => {
     console.error("Error fetching data:", error);
