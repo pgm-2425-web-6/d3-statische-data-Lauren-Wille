@@ -1,9 +1,17 @@
+:root {
+  --background: #121212;
+  --text: #fff;
+  --primary-colour: #6699c3;
+  --secondary-colour: #054b69;
+  --tooltip-bg: #000000b3;
+}
+
 body {
   margin: 0 auto;
   padding: 0;
   font-family: "Arial", sans-serif;
-  background-color: #f4f4f9;
-  color: #333;
+  background-color: var(--background);
+  color: var(--text);
   overflow: hidden;
   text-align: center;
 }
@@ -18,8 +26,8 @@ body {
 
 .tooltip {
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #fff;
+  background-color: var(--tooltip-bg);
+  color: var(--text);
   padding: 5px 10px;
   border-radius: 4px;
   font-size: 14px;
@@ -29,15 +37,14 @@ body {
 }
 
 .bar {
-  fill: rgb(102, 153, 195);
+  fill: var(--primary-colour);
   transition: fill 0.3s ease-in-out;
 }
 
 .bar:hover {
-  fill: rgb(5, 75, 105);
+  fill: var(--secondary-colour);
 }
 
-text
-{
-    font-size: 13px;
+text {
+  font-size: 13px;
 }
